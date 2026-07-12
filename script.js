@@ -127,38 +127,3 @@ tiltItems.forEach((item) => {
     item.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
   });
 });
-
-const transition = document.querySelector('.page-transition');
-
-document.querySelectorAll('a').forEach(link => {
-
-    const href = link.getAttribute('href');
-
-    if (
-        href &&
-        !href.startsWith('#') &&
-        !href.startsWith('mailto') &&
-        !href.startsWith('tel') &&
-        !link.hasAttribute('target')
-    ) {
-
-        link.addEventListener('click', e => {
-
-            e.preventDefault();
-
-            transition.classList.add('active');
-
-            setTimeout(() => {
-                window.location.href = href;
-            }, 900);
-
-        });
-
-    }
-});
-
-window.addEventListener('pageshow', () => {
-
-    transition.classList.remove('active');
-
-});

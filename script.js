@@ -56,21 +56,24 @@ internalLinks.forEach((link) => {
 
   link.addEventListener('click', (event) => {
     const href = link.getAttribute('href');
-    if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) return;
+
+    if (
+      !href ||
+      href.startsWith('#') ||
+      href.startsWith('mailto:') ||
+      href.startsWith('tel:') ||
+      href.startsWith('javascript:')
+    ) {
+      return;
+    }
 
     const url = new URL(href, window.location.href);
+
     if (url.origin !== window.location.origin) return;
 
-    event.preventDefault();
-    if (transitionOverlay) {
-     // transitionOverlay.classList.add('active');
-   // }
-
-  //  window.setTimeout(() => {
-  //    window.location.assign(url.href);
-  //  }, 180);
-//  });
-//});
+    // Transition temporarily disabled
+  });
+});
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

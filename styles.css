@@ -149,7 +149,7 @@ body::before {
   background:#000;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at center, #222 0%, #000 70%;
+  background: radial-gradient(circle at center, #222 0%, #000 70%);
   transform: translateY(100%);
   pointer-events: none;
   transition: transform 0.9s cubic-bezier(.77,0,.18,1);

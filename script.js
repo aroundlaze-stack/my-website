@@ -63,14 +63,14 @@ internalLinks.forEach((link) => {
 
     event.preventDefault();
     if (transitionOverlay) {
-      transitionOverlay.classList.add('active');
-    }
+     // transitionOverlay.classList.add('active');
+   // }
 
-    window.setTimeout(() => {
-      window.location.assign(url.href);
-    }, 180);
-  });
-});
+  //  window.setTimeout(() => {
+  //    window.location.assign(url.href);
+  //  }, 180);
+//  });
+//});
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

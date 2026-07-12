@@ -209,10 +209,6 @@ img {
   display: block;
 }
 
-.page-shell {
-  min-height: 100vh;
-}
-
 .topbar{
     position:fixed;
     top:20px;

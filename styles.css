@@ -28,10 +28,14 @@ body{
     font-family:'Space Grotesk',sans-serif;
     background:#050816;
     color:#ffffff;
-    overflow-x:hidden;
     line-height:1.6;
     position:relative;
     animation:pageEnter 1s ease forwards;
+}
+
+html, body{
+    width:100%;
+    overflow-x:hidden;
 }
 
 @keyframes pageEnter{
@@ -206,7 +210,14 @@ body::before {
 
 img {
   max-width: 100%;
+  height:auto;
   display: block;
+}
+
+/* MAIN CONTENTE */
+main{
+    width:min(180px,92%);
+    margin-inline:auto;
 }
 
 .topbar{
@@ -332,6 +343,9 @@ img {
 }
 
 .hero-visual {
+  display:flex;
+  justify-content:center;
+  align-items:center;
   position: relative;
   z-index: 1;
 }
@@ -661,9 +675,14 @@ img {
   font-size: 1rem;
 }
 
+.hero-trust{
+    margin-top:28px;
+    max-width:540px;
+}
+
 .hero-actions {
   display: flex;
-  gap: 12px;
+  gap: 18px;
   flex-wrap: wrap;
   margin-top: 24px;
 }
@@ -700,7 +719,7 @@ img {
 .hero-badges {
   list-style: none;
   display: flex;
-  gap: 14px;
+  gap: 16px;
   flex-wrap: wrap;
   padding: 0;
   margin: 24px 0 0;
@@ -921,14 +940,21 @@ img {
 .mini-chart span:nth-child(5) { height: 95%; }
 
 .section {
+  width:100%;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 36px 32px 24px;
+  padding: 80px 0;
 }
 
 .section-heading {
   margin-bottom: 20px;
   max-width: 760px;
+}
+
+.section-heder{
+  max-width:760px;
+  margin:0 auto 50px;
+  text-align:center;
 }
 
 h1, h2, h3 {
@@ -1338,13 +1364,6 @@ nav a:hover::after{
     box-shadow:0 18px 40px rgba(124,58,237,.35);
 }
 
-/* Section base */
-.section{
-    width:min(1280px,92%);
-    margin:auto;
-    padding:120px 0;
-}
-
 .section-header,
 .section-heading{
     text-align:center;
@@ -1366,13 +1385,13 @@ nav a:hover::after{
 .section-header h2,
 .section-heading h2{
     font-size:clamp(2.3rem,5vw,4rem);
-    margin-bottom:18px;
+    margin-bottom:16px;
 }
 
 .section-header p,
 .section-heading p{
-    max-width:650px;
-    margin:auto;
+    max-width:640px;
+    margin:0 auto;
     color:var(--muted);
 }
 
@@ -1452,8 +1471,8 @@ nav a:hover::after{
 .product-grid{
     display:grid;
     grid-template-columns:
-    repeat(auto-fit,minmax(350px,1fr));
-    gap:40px;
+    repeat(auto-fit,minmax(320px,1fr));
+    gap:32px;
 }
 
 .product-card{
@@ -1553,7 +1572,7 @@ nav a:hover::after{
     display:grid;
     grid-template-columns:
     repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
+    gap:32px;
 }
 
 .review-card{
@@ -2027,204 +2046,6 @@ nav a:hover::after{
 /* =====================================================
    SMART PICKS DAILY V2
    ORBYT INSPIRED CSS
-   PART 1
-======================================================*/
-
-/* Background */
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:
-    radial-gradient(circle at 20% 20%,rgba(124,58,237,.18),transparent 45%),
-    radial-gradient(circle at 80% 30%,rgba(56,189,248,.15),transparent 40%),
-    radial-gradient(circle at 50% 100%,rgba(255,255,255,.04),transparent 50%);
-    z-index:-3;
-}
-
-/* Animated Orbs */
-.bg-orbs,
-.ambient {
-    position:fixed;
-    inset:0;
-    overflow:hidden;
-    pointer-events:none;
-    z-index:-2;
-}
-
-.orb,
-.ambient-1,
-.ambient-2,
-.ambient-3{
-    position:absolute;
-    border-radius:50%;
-    filter:blur(80px);
-    opacity:.45;
-    animation:float 18s infinite ease-in-out;
-}
-
-.orb1,
-.ambient-1{
-    width:420px;
-    height:420px;
-    background:#7c3aed;
-    top:-120px;
-    left:-120px;
-}
-
-.orb2,
-.ambient-2{
-    width:350px;
-    height:350px;
-    background:#38bdf8;
-    bottom:-120px;
-    right:-120px;
-    animation-delay:5s;
-}
-
-@keyframes float{
-0%{transform:translateY(0) translateX(0);}
-50%{transform:translateY(50px) translateX(40px);}
-100%{transform:translateY(0) translateX(0);}
-}
-
-/* Navigation */
-.topbar,
-.glass-nav{
-    position:fixed;
-    top:20px;
-    left:50%;
-    transform:translateX(-50%);
-    width:min(1200px,92%);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:16px 30px;
-    backdrop-filter:blur(20px);
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:999px;
-    z-index:1000;
-    box-shadow:var(--shadow);
-}
-
-.brand,
-.logo{
-    font-size:1.2rem;
-    font-weight:700;
-    letter-spacing:2px;
-}
-
-.nav-links,
-nav{
-    display:flex;
-    gap:28px;
-}
-
-.nav-links a,
-nav a{
-    color:white;
-    text-decoration:none;
-    transition:var(--transition);
-    position:relative;
-}
-
-.nav-links a::after,
-nav a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-5px;
-    width:0;
-    height:2px;
-    background:linear-gradient(90deg,var(--primary),var(--secondary));
-    transition:.3s;
-}
-
-.nav-links a:hover::after,
-nav a:hover::after{
-    width:100%;
-}
-
-/* Hero */
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:120px 20px;
-}
-
-.hero-copy,
-.hero-content{
-    max-width:900px;
-}
-
-.eyebrow{
-    color:var(--secondary);
-    letter-spacing:6px;
-    text-transform:uppercase;
-    margin-bottom:18px;
-}
-
-.hero h1{
-    font-size:clamp(3rem,8vw,7rem);
-    line-height:1;
-    font-weight:700;
-    margin-bottom:28px;
-}
-
-.hero p,
-.hero-text{
-    max-width:700px;
-    margin:auto;
-    color:var(--muted);
-    font-size:1.15rem;
-}
-
-.hero-buttons,
-.hero-actions{
-    margin-top:45px;
-    display:flex;
-    justify-content:center;
-    gap:18px;
-    flex-wrap:wrap;
-}
-
-/* Buttons */
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:16px 34px;
-    border-radius:999px;
-    text-decoration:none;
-    transition:var(--transition);
-    font-weight:600;
-}
-
-.btn-primary,
-.primary{
-    background:linear-gradient(135deg,var(--primary),var(--secondary));
-    color:white;
-}
-
-.btn-secondary,
-.secondary{
-    border:1px solid rgba(255,255,255,.2);
-    color:white;
-    background:rgba(255,255,255,.04);
-}
-
-.btn:hover{
-    transform:translateY(-6px);
-    box-shadow:0 18px 40px rgba(124,58,237,.35);
-}
-
-/* =====================================================
-   SMART PICKS DAILY V2
-   ORBYT INSPIRED CSS
    PART 2
 ======================================================*/
 
@@ -2250,19 +2071,6 @@ nav a:hover::after{
     font-size:.85rem;
     letter-spacing:2px;
     margin-bottom:18px;
-}
-
-.section-header h2,
-.section-heading h2{
-    font-size:clamp(2.3rem,5vw,4rem);
-    margin-bottom:18px;
-}
-
-.section-header p,
-.section-heading p{
-    max-width:650px;
-    margin:auto;
-    color:var(--muted);
 }
 
 .glass-card{
@@ -2409,6 +2217,32 @@ nav a:hover::after{
     gap:12px;
     flex-wrap:wrap;
 }
+
+.product-content,
+.review-content{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+.product-actions,
+.read-more{
+    margin-top:auto;
+}
+
+.product-image,
+.review-image{
+    overflow:hidden;
+    border-radius:18px;
+}
+
+.product-image img,
+.review-image img{
+    width:100%;
+    aspect-ratio:16/10;
+    object-fit:cover;
+}
+
 
 .trust-grid{
     display:grid;
@@ -2947,9 +2781,10 @@ display:none;
 }
 
 .hero{
-
-padding-top:160px;
-
+    align-items: center;
+    padding-top:160px;
+    justify-content:space-between;
+    gap:60px;
 }
 
 .hero-buttons{
@@ -2959,11 +2794,21 @@ flex-direction:column;
 }
 
 .product-grid,
+.review-gird,
+.category-grid,
+.trust-grid{
+    width:100%;
+    display:grid;
+    gap:32px;
+    align-items:stretch;
+}
+    
+.product-grid,
 .category-grid,
 .review-grid,
 .testimonial-grid{
 
-grid-template-columns:1fr;
+  grid-template-columns:1fr;
 
 }
 
@@ -3256,6 +3101,14 @@ transform:translateY(0);
 /* ===========================
    Premium Hover Effects
 =========================== */
+.product-card,
+.review-card,
+.categor-card,
+.trust-card{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}
 
 .category-card,
 .product-card,

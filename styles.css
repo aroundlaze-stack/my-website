@@ -3038,6 +3038,8 @@ width:100%;
 
     position:fixed;
 
+    display: none !important;
+
     width:450px;
     height:450px;
 
@@ -3775,3 +3777,11 @@ grid-template-columns:repeat(2,1fr);
 }
 }
 
+body {
+    overflow-x: hidden;
+    overflow-y: auto !important;
+}
+
+html {
+    overflow-x: hidden;
+}

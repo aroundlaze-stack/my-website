@@ -79,20 +79,23 @@
           <div class="ambient-orb orb-a"></div>
           <div class="ambient-orb orb-b"></div>
           <div class="hero-copy">
-            <p class="eyebrow">Authority content, transparent recommendations</p>
-            <h1>Built to inform, earn trust, and turn readers into loyal visitors.</h1>
+            <p class="eyebrow">Expert Reviews • Buying Guides • Honest Recommendations</p>
+            <h1>Smart Picks Daily – Expert Tech Reviews & Buying Guides</h1>
             <p class="hero-text">
-              Smart Picks Daily combines polished storytelling, useful comparisons, honest disclosures, and monetization-friendly content so the site feels like a real authority, not a short promotional page.
+               Discover expert tech reviews, in-depth buying guides, real-world product comparisons, and trusted recommendations for laptops, gaming gear, keyboards, monitors, headphones, AI tools, and the latest technology.
             </p>
             <div class="hero-actions">
-              <a href="blog.html" class="btn btn-primary">Read the latest ideas</a>
-              <a href="reviews.html" class="btn btn-secondary">See the comparisons</a>
+              <a href="blog.html" class="btn btn-primary">Read Buying Guides</a>
+              <a href="reviews.html" class="btn btn-secondary">Read Expert Reviews</a>
             </div>
             <ul class="hero-badges">
-              <li>🧠 Research-backed</li>
-              <li>🔍 Honest disclosures</li>
-              <li>📈 Built for long-term growth</li>
+              <li>🧠 Expert Research</li>
+              <li>⭐ Trusted Recommendations</li>
+              <li>🔒 100% Honest Reviews</li>
             </ul>
+            <p class="hero-trust">
+            Helping readers make confident technology purchases through independent research, honest reviews, and expert recommendations.
+            </p>
           </div>
 
           <div class="hero-visual" data-tilt>
@@ -100,9 +103,9 @@
               <div class="panel-ring ring-a"></div>
               <div class="panel-ring ring-b"></div>
               <div class="panel-card">
-                <span class="panel-label">Now publishing</span>
-                <h3>Practical editorial experiences</h3>
-                <p>Every page now includes more substance, stronger calls to action, trust signals, and clear pathways to the next article.</p>
+                <span class="panel-label">Trusted by Readers</span>
+                <h3>Trusted Technology Recommendations</h3>
+                <p>Explore expert reviews, real-world comparisons, and carefully selected recommendations to help you choose the best tech with confidence.</p>
               </div>
             </div>
           </div>
@@ -240,7 +243,7 @@
             <article class="product-card">
               <div class="product-badge">BEST OVERALL</div>
               <div class="product-image">
-                <img src="https://aroundlaze-stack.github.io/my-website/images/laptop.png" alt="Best Laptop" />
+                <img src="images/best-gaming-laptop.png" alt="Best gaming laptop for performance and everyday use" decoding="async" width="600" height="400" />
               </div>
               <div class="product-content">
                 <h3>Best Laptop 2026</h3>
@@ -259,7 +262,7 @@
             <article class="product-card">
               <div class="product-badge">BEST VALUE</div>
               <div class="product-image">
-                <img src="https://aroundlaze-stack.github.io/my-website/images/keyboard.png" alt="Keyboard" />
+                <img src="images/best-mechanical-keyboard.png" alt="Mechanical gaming keyboard with RGB lighting" loading="lazy" decoding="async" width="600" height="400" />
               </div>
               <div class="product-content">
                 <h3>Mechanical Keyboard</h3>
@@ -308,7 +311,7 @@
           <div class="review-grid">
             <article class="review-card glass-card">
               <div class="review-image">
-                <img src="https://aroundlaze-stack.github.io/my-website/images/monitor.png" alt="Gaming Monitor" />
+                <img src="images/best-gaming-monitor.png" alt="Ultra-wide gaming monitor with immersive display" loading="lazy" decoding="async" width="600" height="400" />
               </div>
               <div class="review-content">
                 <span class="review-category">Monitor</span>
@@ -319,7 +322,7 @@
             </article>
             <article class="review-card glass-card">
               <div class="review-image">
-                <img src="https://aroundlaze-stack.github.io/my-website/images/headphones.png" alt="Headphones" />
+                <img src="images/best-gaming-headphones.png" alt="Premium gaming headset with surround sound" loading="lazy" decoding="async" width="600" height="400" />
               </div>
               <div class="review-content">
                 <span class="review-category">Audio</span>
@@ -330,7 +333,7 @@
             </article>
             <article class="review-card glass-card">
               <div class="review-image">
-                <img src="https://aroundlaze-stack.github.io/my-website/images/mouse.png" alt="Gaming Mouse" />
+                <img src="images/best-gaming-mouse.png" alt="High-performance gaming mouse with customizable RGB lighting" loading="lazy" decoding="async" width="600" height="400" />
               </div>
               <div class="review-content">
                 <span class="review-category">Accessories</span>
@@ -479,15 +482,43 @@
     <script type="application/ld+json">
     {
       "@context":"https://schema.org",
-      "@type":"WebSite",
-      "name":"Smart Picks Daily",
-      "url":"https://aroundlaze-stack.github.io/my-website/",
-      "description":"Technology reviews, buying guides, comparisons and recommendations.",
-      "potentialAction":{
-        "@type":"SearchAction",
-        "target":"https://https://aroundlaze-stack.github.io/my-website//search?q={search_term_string}",
-        "query-input":"required name=search_term_string"
-      }
+      "@graph":[
+        {
+          "@type":"Organization",
+          "@id":"https://aroundlaze-stack.github.io/my-website/#organization",
+          "name":"Smart Picks Daily",
+          "url":"https://aroundlaze-stack.github.io/my-website/",
+          "description":"Expert technology reviews, buying guides, product comparisons, and trusted recommendations.",
+          "sameAs":[]
+        },
+        {
+          "@type":"WebSite",
+          "@id":"https://aroundlaze-stack.github.io/my-website/#website",
+          "url":"https://aroundlaze-stack.github.io/my-website/",
+          "name":"Smart Picks Daily",
+          "publisher":{
+            "@id":"https://aroundlaze-stack.github.io/my-website/#organization"
+          },
+          "potentialAction":{
+            "@type":"SearchAction",
+            "target":"https://aroundlaze-stack.github.io/my-website/search?q={search_term_string}",
+            "query-input":"required name=search_term_string"
+          }
+        },
+        {
+          "@type":"WebPage",
+          "@id":"https://aroundlaze-stack.github.io/my-website/#webpage",
+          "url":"https://aroundlaze-stack.github.io/my-website/",
+          "name":"Smart Picks Daily – Expert Tech Reviews & Buying Guides",
+          "isPartOf":{
+            "@id":"https://aroundlaze-stack.github.io/my-website/#website"
+          },
+          "about":{
+            "@id":"https://aroundlaze-stack.github.io/my-website/#organization"
+          },
+          "description":"Expert technology reviews, buying guides, product comparisons, and trusted recommendations."
+        }
+      ]
     }
     </script>
     <script src="script.js"></script>

@@ -30,7 +30,7 @@ body{
     color:#ffffff;
     overflow-x:hidden;
     line-height:1.6;
-    position:fixed;
+    position:relative;
     animation:pageEnter 1s ease forwards;
 }
 

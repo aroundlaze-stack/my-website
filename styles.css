@@ -216,7 +216,7 @@ img {
 
 /* MAIN CONTENTE */
 main{
-    width:min(180px,92%);
+    width:min(1200px,92%);
     margin-inline:auto;
 }
 

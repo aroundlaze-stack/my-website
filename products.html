@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#060816">
+    <title>Premium Tech Products & Buying Guides | Smart Picks Daily</title>
+    <meta name="description" content="Browse a premium product catalog of laptops, keyboards, mice, monitors, audio gear, and accessories with curated buying guidance.">
+    <link rel="canonical" href="https://aroundlaze-stack.github.io/my-website/products.html">
+    <meta property="og:title" content="Premium Tech Products & Buying Guides | Smart Picks Daily">
+    <meta property="og:description" content="Browse a premium product catalog of laptops, keyboards, mice, monitors, audio gear, and accessories with curated buying guidance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aroundlaze-stack.github.io/my-website/products.html">
+    <meta property="og:image" content="https://aroundlaze-stack.github.io/my-website/images/og-image.png">
+    <meta property="og:site_name" content="Smart Picks Daily">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Premium Tech Products & Buying Guides | Smart Picks Daily">
+    <meta name="twitter:description" content="Browse a premium product catalog of laptops, keyboards, mice, monitors, audio gear, and accessories with curated buying guidance.">
+    <meta name="twitter:image" content="https://aroundlaze-stack.github.io/my-website/images/og-image.png">
+    <link rel="stylesheet" href="styles.css">
+    <script id="page-schema" type="application/ld+json"></script>
+  </head>
+  <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <div class="cinematic-bg">
+      <div class="light-orb orb-one"></div>
+      <div class="light-orb orb-two"></div>
+      <div class="light-orb orb-three"></div>
+    </div>
+
+    <div class="page-shell visible" id="page-shell" style="opacity: 1 !important; transform: none !important; visibility: visible !important;">
+      <header class="topbar">
+        <a class="brand" href="index.html">Smart Picks Daily</a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="blog.html">Blog</a>
+          <a href="resources.html">Resources</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <main class="products-page">
+        <nav class="product-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span>Products</span>
+        </nav>
+
+        <section class="products-hero reveal active">
+          <p class="eyebrow">Premium catalog • curated with care</p>
+          <h1>Find the right gear with a calmer, more confident shopping experience.</h1>
+          <p class="products-hero__description">Search premium laptops, keyboards, mice, monitors, audio gear and accessories by use case, category or budget.</p>
+
+          <form class="products-search" role="search" aria-label="Search products">
+            <label class="visually-hidden" for="product-search">Search products</label>
+            <input id="product-search" type="search" placeholder="Search laptops, keyboards, mice…" autocomplete="off">
+          </form>
+
+          <div class="products-filters" id="products-filters" aria-label="Category filters"></div>
+        </section>
+
+        <section class="products-grid reveal active" id="products-grid" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <script src="script.js" defer></script>
+    <script src="products.js" defer></script>
+  </body>
+</html>
